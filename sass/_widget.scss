@@ -20,10 +20,11 @@
 
     }
     &__grid{
-        flex: 0 0 28%;
+        flex: 0 0 21%;
         align-items: stretch;
         margin: 2.2rem;
-        padding: 3rem 3rem;
+        padding: 2rem 2rem;
+        text-align: justify;
         background-color: $color-grey-light-1;
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
 
