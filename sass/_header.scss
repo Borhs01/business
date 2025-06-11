@@ -1,6 +1,4 @@
-#widget{
-    padding-top: 10rem;
-}
+
 .main__header{
     display: flex;
 
@@ -154,11 +152,11 @@
     &__logo__image{
         //margin-top: 3rem;
         margin-left: 4rem;
-        width: 15rem;
+        width: 7rem;
 
         @media screen and (max-width: $bp-small) {
             margin-left: 2rem;
-            width: 10rem;
+            width: 4rem;
         }
 
     }
