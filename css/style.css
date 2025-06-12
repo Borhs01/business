@@ -399,7 +399,8 @@ body {
 }
 .header__logo__image {
   margin-left: 4rem;
-  width: 7rem;
+  height: 5rem;
+  width: 12rem;
 }
 @media screen and (max-width: 37.5em) {
   .header__logo__image {
