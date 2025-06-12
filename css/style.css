@@ -122,6 +122,58 @@ body {
   text-align: center;
 }
 
+.section__bio {
+  display: flex;
+  padding: 0rem 4rem 0rem;
+}
+
+.bio__left {
+  flex: 0 0 60%;
+  display: flex;
+  flex-direction: row;
+  background-color: #f9f7f6;
+  margin-right: 4rem;
+  padding: 4rem;
+}
+.bio__left--img {
+  height: 38rem;
+  width: 38rem;
+  border-radius: 50%;
+  padding-right: rem;
+}
+.bio__left--heading {
+  font-size: 3rem;
+  text-align: center;
+}
+.bio__left--text {
+  font-size: 1.4rem;
+  text-align: justify;
+  margin-left: 2rem;
+  line-height: 1.4;
+}
+.bio__left--text:not(:last-child) {
+  padding-bottom: 1rem;
+  padding-top: 8rem;
+}
+.bio__right {
+  flex: 1;
+  background-color: #f9f7f6;
+  padding: 4rem;
+}
+.bio__right--heading {
+  margin-top: 4rem;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.bio__right--text {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+.bio__right--text:not(:last-child) {
+  padding-bottom: 2rem;
+}
+
 #who {
   padding-top: 10rem;
   padding-bottom: 3rem;
@@ -715,9 +767,9 @@ body {
   text-decoration: none;
   color: #101d2c;
   background-color: #aaa;
-  padding: 1.5rem 3rem;
+  padding: 1.2rem 10rem;
   border-radius: 0.5rem;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 600;
   font-family: "Josefin Sans", sans-serif;
   border: none;
@@ -1181,6 +1233,153 @@ body {
 .section__brief__email:active {
   font-size: 1rem;
   font-family: inherit;
+}
+
+.connect {
+  display: flex;
+  margin-top: 4rem;
+}
+.connect__joinUs {
+  flex: 50%;
+}
+.connect__joinUs__heading {
+  color: #c69963;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.connect__bookCall {
+  flex: 50%;
+}
+
+.navigationphone {
+  display: none;
+}
+.navigationphone__checkbox {
+  display: none;
+}
+@media screen and (max-width: 53.25em) {
+  .navigationphone {
+    display: block;
+  }
+}
+.navigationphone__button {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 2.5rem;
+  right: 2rem;
+  background-color: #fff;
+  z-index: 4000;
+  text-align: center;
+  cursor: pointer;
+}
+@media screen and (max-width: 37.5em) {
+  .navigationphone__button {
+    top: 1.3rem;
+  }
+}
+.navigationphone__background {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 2.5rem;
+  right: 2rem;
+  background-color: rgba(198, 153, 99, 0.9);
+  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+  z-index: 2000;
+  transition: transform 0.3s;
+}
+@media screen and (max-width: 37.5em) {
+  .navigationphone__background {
+    top: 1.8rem;
+    right: 2.5rem;
+  }
+}
+.navigationphone__bar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3000;
+  opacity: 0;
+  width: 0;
+  transition: all 0.3;
+}
+.navigationphone__nav {
+  position: absolute;
+  top: 45%;
+  right: 20%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  justify-items: center;
+}
+.navigationphone__items:link, .navigationphone__items:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+  line-height: 1.7;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.1rem;
+}
+.navigationphone__items:hover, .navigationphone__items:active {
+  transition: all 0.1s ease;
+  border-bottom: 0.2rem solid #c69963;
+  padding: 0.1rem;
+  color: #c69963;
+  box-sizing: border-box;
+}
+.navigationphone__checkbox:checked ~ .navigationphone__background {
+  transform: scale(80);
+}
+.navigationphone__checkbox:checked ~ .navigationphone__bar {
+  opacity: 1;
+  width: 100%;
+}
+.navigationphone__toggle {
+  position: relative;
+  margin-top: 1.8rem;
+}
+.navigationphone__toggle, .navigationphone__toggle::before, .navigationphone__toggle::after {
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #000;
+  display: inline-block;
+}
+.navigationphone__toggle::before, .navigationphone__toggle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.2s;
+}
+.navigationphone__toggle::before {
+  top: -0.6rem;
+}
+.navigationphone__toggle::after {
+  top: 0.6rem;
+}
+.navigationphone__button:hover .navigationphone__toggle::before {
+  top: -0.7rem;
+}
+.navigationphone__button:hover .navigationphone__toggle::after {
+  top: 0.7rem;
+}
+.navigationphone__checkbox:checked + .navigationphone__button .navigationphone__toggle {
+  background-color: transparent;
+}
+.navigationphone__checkbox:checked + .navigationphone__button .navigationphone__toggle::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+.navigationphone__checkbox:checked + .navigationphone__button .navigationphone__toggle::after {
+  top: 0;
+  transform: rotate(-135deg);
 }
 
 .navigationphone {

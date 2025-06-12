@@ -181,3 +181,22 @@
         }
     }
 }
+.connect{
+    display: flex;
+    margin-top: 4rem;
+    
+
+    &__joinUs{
+        flex: 50%;
+
+        &__heading{
+            color: $color-primary;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+    }
+    &__bookCall{
+        flex: 50%;
+    }
+}

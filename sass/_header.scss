@@ -2,6 +2,7 @@
 .main__header{
     display: flex;
 
+
     @media screen and (max-width: $bp-small) {
            flex-direction: column;
     }
@@ -151,8 +152,9 @@
     }
     &__logo__image{
         //margin-top: 3rem;
-        margin-left: 4rem;
-        width: 7rem;
+        margin-left: 5rem;
+        width: 15rem;
+        height: 5rem;
 
         @media screen and (max-width: $bp-small) {
             margin-left: 2rem;
@@ -212,4 +214,7 @@
     position: fixed;
     width: 100%;
     padding: 2rem;
+}
+.header__logo__image{
+    height: 12rem;
 }
